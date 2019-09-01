@@ -1,0 +1,9 @@
+#!/bin/sh
+chck=$(xrandr --query | grep HDMI-2 | grep 1920x1080)
+if [ -z "$chck" ]
+then
+	xrandr --output HDMI-2 --rotate normal
+elif [ -z "$chck2" ]
+then
+	xrandr --output HDMI-2 --rotate left
+fi
